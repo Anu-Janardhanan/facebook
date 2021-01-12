@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<!-- <div class="row">
+    <div class="col-sm-12 mb-3">
+        <h4 class="text-center">Welcome {{ user.username }}</h4>
+    </div>
+  
+    {% for ass in backends.associated %}
+    {% if ass.provider == 'facebook' %}
+    <div class="col-md-6 text-center">
+        <img src="{{ass.extra_data.picture.data.url}}" alt="" width="150" height="150" style="border-radius: 50%">
+    </div>
+    <div class="col-md-6 social-container my-2">
+        <p> Signed in via: {{ ass.provider }} </p>
+        <p> Name: {{ ass.extra_data.name }} </p>
+        <p> Provider url: <a href="{{ass.extra_data.profile_url}}">link</a></p>
+    </div>
+    {% endif %}
+   
+    {% if ass.provider == 'linkedin-oauth2' %}
+    <div class="col-md-6 text-center">
+        <img src="{{ass.extra_data.picture_url}}" alt="" width="150" height="150" style="border-radius: 50%">
+    </div>
+    <div class="col-md-6 social-container my-2">
+        <p> Signed in via: Linkedin </p>
+        <p> Name: {{ ass.extra_data.name }} </p>
+        <p> Provider url: <a href="{{ass.extra_data.profile_url}}">link</a></p>
+    </div>
+    {% endif %}
+    
+    {% endfor %}
+    <div class="col-sm-12 mt-2 text-center">
+        <button class="btn btn-danger">
+            <a href="{% url 'logout' %}">Logout</a>
+        </button>
+    </div>
+   
+</div> -->
+
+<div class="home-page-dashboard">
+  
+    <div class="content-section">
+        <div class="content-section-sidebar">
+            <div class="text-center">
+                <div class="content-sidebar-growthplug">
+                    GROWTH PLUG
+                </div>
+              
+                <div class="sidebar">
+                    <a href="#home"><i class="fa fa-fw fa-home"></i>Dashboard</a>
+                    <a href="#services"><i class="fa fa-fw fa-wrench"></i>Websites</a>
+                    <a href="#clients"><i class="fa fa-fw fa-user"></i>Visitors</a>
+                    <a href="#contact"><i class="fa fa-fw fa-envelope"></i>Review</a>
+                    <a href="#contact"><i class="fa fa-fw fa-list"></i>Listings</a>
+                    <a href="#contact"><i class="fa fa-fw fa-user"></i>Appoinments</a>
+                    <a href="#contact"><i class="fa fa-fw fa-gear"></i>Settings</a>
+                   
+                  </div>
+          
+            </div>
+        </div>
+        <div class="content-section-content">
+            <div class="content-header-section">
+                <button class="btn btn-danger">
+                    <a href="{% url 'logout' %}">Logout</a>
+                </button>
+            </div>
+            <div class="listing-content-sections">
+                <div class="listing-header">
+                    Listings
+                </div>
+            </div>
+          
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
